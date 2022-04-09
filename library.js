@@ -2,7 +2,7 @@
 // mit license
 // get more work done with less code, like jquery
 // JaydenDev, 2022
-
+console.log("Its never a good idea to use a file not tied to a release!")
 const get = id => document.getElementById(id);
 const getAll = selector => document.querySelectorAll(selector);
 const mult = (a, b) => a * b;
