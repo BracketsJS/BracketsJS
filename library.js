@@ -67,3 +67,39 @@ function addScript(path) {
 function toggleClass(className, elem) {
     elem.classList.toggle(className);
 }
+
+function appendScriptToHead(path) {
+    const head = document.getElementsByTagName('head')[0];
+    const script = document.createElement('script');
+    script.src = path;
+    head.appendChild(script);
+}
+
+function sfetch(url, options) {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open(options.method || 'GET', url);
+        xhr.onload = () => {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                resolve(xhr.response);
+            } else {
+                reject(xhr.statusText);
+            }
+        };
+        xhr.onerror = () => reject(xhr.statusText);
+        if (options.headers) {
+            Object.keys(options.headers).forEach(key => {
+                xhr.setRequestHeader(key, options.headers[key]);
+            });
+        }
+        xhr.send(options.body);
+    });
+}
+
+function createBtn(classList, text) {
+    // create a button with classlist classList
+    const btn = document.createElement('button');
+    btn.classList = classList;
+    btn.textContent = text;
+    document.body.appendChild(btn);
+}
