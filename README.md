@@ -21,6 +21,12 @@ Creates an element with the given tag name.
 ```javascript
 createElement(element, parentID, id, className, innerHTML, href);
 ```
+**element** - The element tag
+**parentID** - The ID of the parent element \
+**id** - The ID to give the element \
+**className** - The class to give the element \
+**innerHTML** - The HTML to give the element \
+**href** - Where to have the link point if the element is a link "a"
 ## removeLinks
 Remove all link tags
 ```javascript
@@ -31,6 +37,7 @@ Swap the stylesheet with the stylesheet defined
 ```javascript
 swapStyles(stylesheet);
 ```
+**stylesheet** - Path to css file
 ## addScript
 Injects as script into head tag
 ```javascript
@@ -41,6 +48,7 @@ Loads a css file
 ```javascript
 loadCSSFile(file);
 ```
+**script** - path to script
 # Aliases
 ## get
 Gets the element with the given id
