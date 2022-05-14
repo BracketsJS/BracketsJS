@@ -1,0 +1,24 @@
+{
+  "name": "simplicityjs",
+  "version": "1.0.0",
+  "description": "SimplicityJS Framework",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaydenDev/SimplicityJS.git"
+  },
+  "keywords": [
+    "JS",
+    "Framework",
+    "Libary"
+  ],
+  "author": "JaydenDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JaydenDev/SimplicityJS/issues"
+  },
+  "homepage": "https://github.com/JaydenDev/SimplicityJS#readme"
+}

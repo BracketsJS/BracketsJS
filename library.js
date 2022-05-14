@@ -1,39 +1,45 @@
-// simplicity js
-// mit license
-// get more work done with less code, like jquery
-// JaydenDev, 2022
-console.log("Its never a good idea to use a file not tied to a release!")
-const get = id => document.getElementById(id);
-const getAll = selector => document.querySelectorAll(selector);
-const mult = (a, b) => a * b;
-const divid = (a, b) => a / b;
-const add = (a, b) => a + b;
-const sub = (a, b) => a - b;
-const getRand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+// JaydenDev 2022
+// MIT License
+// Project #0178]
+// Javascript library to make the daily javascript tasks, simpler.
 
-function createElem(tag, text, id, className) {
-    const elem = document.createElement(tag);
-    if (className) {
-        elem.className = className;
-    }
-    if (text) {
-        elem.textContent = text;
-    }
+// functions
+function createElement(element, parentID, id, className, innerHTML, href) {
+    var newElement = document.createElement(element);
     if (id) {
-        elem.id = id;
+        newElement.id = id;
+    }
+    if (className) {
+        newElement.className = className;
+    }
+    if (innerHTML) {
+        newElement.innerHTML = innerHTML;
+    }
+    if (parentID) {
+        parent = document.getElementById(parentID);
+        parent.appendChild(newElement);
+    }
+    newElement.href = href;
+    return newElement;
+}
+
+function removeLinks() {
+    var links = document.getElementsByTagName("link");
+    for (var i = 0; i < links.length; i++) {
+        links[i].parentNode.removeChild(links[i]);
     }
 }
 
-function appendElem(parent, child) {
-    parent.appendChild(child);
+function swapStyles(style) {
+    removeLinks();
+    loadCSSFile(style);
 }
 
-function setClass(elem, className) {
-    elem.className = className;
-}
-
-function injectStyle(elem, style) {
-    elem.style = style;
+function addScript(path) {
+    const head = document.getElementsByTagName('head')[0];
+    const script = document.createElement('script');
+    script.src = path;
+    head.appendChild(script);
 }
 
 function loadCSSFile(path) {
@@ -45,61 +51,14 @@ function loadCSSFile(path) {
     head.appendChild(link);
 }
 
-function onKeyPressRun(key, func) {
-    document.addEventListener('keypress', function(e) {
-        if (e.keyCode === key) {
-            func();
-        }
-    });
-}
+// aliases
+var get = document.getElementById.bind(document); // aliases document.getElementById to just 'get'
+var delay = setTimeout.bind(window); // aliases setTimeout to just 'delay'
+const getAll = selector => document.querySelectorAll(selector); // quick alias to get all elements 
+const mult = (a, b) => a * b; // multiply
+const divid = (a, b) => a / b; // divide
+const add = (a, b) => a + b; // add
+const sub = (a, b) => a - b; // subtract
+const getRand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min; // get a random number
 
-function createListener(elem, event, func) {
-    elem.addEventListener(event, func);
-}
 
-function addScript(path) {
-    const head = document.getElementsByTagName('head')[0];
-    const script = document.createElement('script');
-    script.src = path;
-    head.appendChild(script);
-}
-
-function toggleClass(className, elem) {
-    elem.classList.toggle(className);
-}
-
-function appendScriptToHead(path) {
-    const head = document.getElementsByTagName('head')[0];
-    const script = document.createElement('script');
-    script.src = path;
-    head.appendChild(script);
-}
-
-function sfetch(url, options) {
-    return new Promise((resolve, reject) => {
-        const xhr = new XMLHttpRequest();
-        xhr.open(options.method || 'GET', url);
-        xhr.onload = () => {
-            if (xhr.status >= 200 && xhr.status < 300) {
-                resolve(xhr.response);
-            } else {
-                reject(xhr.statusText);
-            }
-        };
-        xhr.onerror = () => reject(xhr.statusText);
-        if (options.headers) {
-            Object.keys(options.headers).forEach(key => {
-                xhr.setRequestHeader(key, options.headers[key]);
-            });
-        }
-        xhr.send(options.body);
-    });
-}
-
-function createBtn(classList, text) {
-    // create a button with classlist classList
-    const btn = document.createElement('button');
-    btn.classList = classList;
-    btn.textContent = text;
-    document.body.appendChild(btn);
-}
