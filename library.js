@@ -4,7 +4,7 @@
 // Javascript library to make the daily javascript tasks, simpler.
 
 // functions
-function createElement(element, parentID, id, className, innerHTML, href) {
+function createElem(element, parentID, id, className, innerHTML, href) {
     var newElement = document.createElement(element);
     if (id) {
         newElement.id = id;
