@@ -1,6 +1,6 @@
 // JaydenDev 2022
 // MIT License
-// SimplicityJS
+// BracketsJS
 // Javascript library to make the daily javascript tasks, simpler.
 
 // functions
