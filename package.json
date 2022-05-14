@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JaydenDev/SimplicityJS.git"
+    "url": "git+https://github.com/JaydenDev/BracketsJS.git"
   },
   "keywords": [
     "JS",
@@ -18,7 +18,7 @@
   "author": "JaydenDev",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/JaydenDev/SimplicityJS/issues"
+    "url": "https://github.com/JaydenDev/BracketsJS/issues"
   },
-  "homepage": "https://github.com/JaydenDev/SimplicityJS#readme"
+  "homepage": "https://github.com/JaydenDev/BracketsJS#readme"
 }
