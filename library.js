@@ -19,7 +19,9 @@ function createElem(element, parentID, id, className, innerHTML, href) {
         parent = document.getElementById(parentID);
         parent.appendChild(newElement);
     }
-    newElement.href = href;
+    if (element == "a") {
+        newElement.href = href;
+    }
     return newElement;
 }
 
@@ -36,29 +38,24 @@ function swapStyles(style) {
 }
 
 function addScript(path) {
-    const head = document.getElementsByTagName('head')[0];
     const script = document.createElement('script');
     script.src = path;
-    head.appendChild(script);
+    document.getElementsByTagName('body')[0].appendChild(script);
 }
 
-function loadCSSFile(path) {
-    const head = document.getElementsByTagName('head')[0];
+function loadCSSFile(path) {    
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.type = 'text/css';
     link.href = path;
-    head.appendChild(link);
+    document.getElementsByTagName('head')[0].appendChild(link);
 }
 
 // aliases
 var get = document.getElementById.bind(document); // aliases document.getElementById to just 'get'
 var delay = setTimeout.bind(window); // aliases setTimeout to just 'delay'
-const getAll = selector => document.querySelectorAll(selector); // quick alias to get all elements 
 const mult = (a, b) => a * b; // multiply
 const divid = (a, b) => a / b; // divide
 const add = (a, b) => a + b; // add
 const sub = (a, b) => a - b; // subtract
+const getAll = selector => document.querySelectorAll(selector); // quick alias to get all elements 
 const getRand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min; // get a random number
-
-
