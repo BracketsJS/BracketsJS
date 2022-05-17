@@ -53,5 +53,9 @@ function loadCSSFile(path) {
 // aliases
 var get = document.getElementById.bind(document); // aliases document.getElementById to just 'get'
 var delay = setTimeout.bind(window); // aliases setTimeout to just 'delay'
+const mult = (a, b) => a * b; // multiply
+const divid = (a, b) => a / b; // divide
+const add = (a, b) => a + b; // add
+const sub = (a, b) => a - b; // subtract
 const getAll = selector => document.querySelectorAll(selector); // quick alias to get all elements 
 const getRand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min; // get a random number
