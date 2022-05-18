@@ -19,9 +19,6 @@ function createElem(element, parentID, id, className, innerHTML, href) {
         parent = document.getElementById(parentID);
         parent.appendChild(newElement);
     }
-    if (element == "a") {
-        newElement.href = href;
-    }
     return newElement;
 }
 
