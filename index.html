@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>BracketsJS Docs</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/dark.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BracketsJS</title>
+    <link rel="stylesheet" href="./output/out.css">
 </head>
-<body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: 'BracketsJS',
-      repo: 'https://github.com/BracketsJS'
-    }
-  </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<body class="text-white m-16 bg-gray-900">
+    <h1 class="text-4xl">Choose a version.</h1>
+    <hr>
+    <br>
+    <div class="grid grid-rows-2 space-y-2">
+        <a href="https://unpkg.com/browse/bracketsjs@1.1.1/library.min.js" class="text-4xl hover:animate-[pulse_1s] hover:bg-gray-700 flex space-x-4 bg-gray-800 rounded-lg p-8 h-24 w-full">
+            <h1 class="text-emerald-500">Latest (1.1.1)</h1>
+            <h1 class="text-red-500">Unstable</h1>
+            <h1 class="text-red-500">Breaking Changes</h1>
+            <h1 class="text-emerald-500">Features</h1>
+        </a>
+        <a href="https://unpkg.com/bracketsjs@1.0.4-lts.0/library.min.js" class="text-4xl flex hover:animate-[pulse_1s] space-x-4 hover:bg-gray-700 bg-gray-800 rounded-lg p-8 h-24 w-full">
+            <h1 class="text-emerald-500">LTS (1.0.3)</h1>
+            <h1 class="text-emerald-500">Stable</h1>
+            <h1 class="text-emerald-500">Only security patches</h1>
+        </a>
+    </div>
 </body>
 </html>
