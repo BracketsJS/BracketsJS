@@ -1,3 +1,5 @@
 # BracketsJS
-A JavaScript library that aims to make lengthy tasks simpler. Also, providing basic functions for DOM maniupulation and easy Light/Dark modes.
-[Documentation](https://jdev.eu.org/BracketsJS)
+A JavaScript library that provides functions for live DOM manipulation. It has features such as:
+- Injecting scripts, dynamically
+- Swapping, removing, or adding stylesheets
+- Creating and deleting elements with ease
