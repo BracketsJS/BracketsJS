@@ -1,6 +1,6 @@
 {
   "name": "bracketsjs",
-  "version": "1.2.0-beta.3",
+  "version": "1.2.0-releasePreview.1",
   "description": "BracketsJS framework",
   "main": "library.js",
   "scripts": {
