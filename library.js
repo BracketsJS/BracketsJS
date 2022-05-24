@@ -3,7 +3,7 @@
 // BracketsJS
 // Javascript libary with functions for live dom manipulation
 var brackets = {};
-const version = 'v1.2.0-beta.2';
+const version = 'v1.2.0-releasePreview.0';
 
 console.log('BracketsJS: You are currently using ' + version);
 
@@ -82,6 +82,14 @@ brackets.loadCSSFile = (path) => {
         link.href = path;
         document.getElementsByTagName('head')[0].appendChild(link);
     }
+}
+
+brackets.swapFavicon = (path) => {
+    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = path;
+    document.getElementsByTagName('head')[0].appendChild(link);
 }
 
 // aliases
