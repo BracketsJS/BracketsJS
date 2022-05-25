@@ -3,9 +3,9 @@
 // BracketsJS
 // Javascript libary with functions for live dom manipulation
 var brackets = {};
-const version = 'v1.2.0-releasePreview.1';
+const version = 'v1.2.0-releasePreview.2';
 
-console.log('BracketsJS: You are currently using ' + version);
+console.log('%c BracketsJS: You are currently using ' + version, "color: green; font-weight: bold;");
 
 // functions
 brackets.createElem = (element, parentID, id, className, innerHTML, href) => {
@@ -37,7 +37,7 @@ brackets.removeLinks = () => {
 }
 brackets.swapStyles = (style) => {
     if (!style.endsWith(".css")) {
-        console.log("BracketsJS: " + style + " is not a css file.");
+        console.log("%c BracketsJS: " + style + " is not a css file.", "color: red; font-weight: bold;");
         return;
     } else {
         removeLinks();
@@ -48,7 +48,7 @@ brackets.swapStyles = (style) => {
 brackets.addScript = (path, bypass) =>{
     if (!path.endsWith(".js")) {
         if (bypass == 'fileName') { 
-            console.log('BracketsJS: fileName bypass is used, this is not recommended' )
+            console.log('%c BracketsJS: fileName bypass is used, this is not recommended', 'color: orange; font-weight: bold;' )
             let bypassFileExtension = true;
         }
         if (bypassFileExtension = true) {
@@ -74,7 +74,7 @@ brackets.removeElem = (id) => {
 
 brackets.loadCSSFile = (path) => { 
     if (!path.endsWith(".css")) {
-        console.log("BracketsJS: " + path + " is not a css file.");
+        console.log("%c BracketsJS: " + path + " is not a css file.", "color: red; font-weight: bold;");
         return;
     } else {   
         const link = document.createElement('link');
