@@ -39,13 +39,11 @@ brackets.removeLinks = () => {
   }
 };
 brackets.swapStyles = (style) => {
-<<<<<<< HEAD
   if (!style.endsWith(".css")) {
     console.log(
       "%c BracketsJS: " + style + " is not a css file.",
       "color: red; font-weight: bold;"
     );
-=======
     if (!style.endsWith(".css")) {
         console.log("%c BracketsJS: " + style + " is not a css file.", "color: red; font-weight: bold;");
         return;
