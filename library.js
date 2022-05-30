@@ -39,13 +39,11 @@ brackets.removeLinks = () => {
   }
 };
 brackets.swapStyles = (style) => {
-<<<<<<< HEAD
   if (!style.endsWith(".css")) {
     console.log(
       "%c BracketsJS: " + style + " is not a css file.",
       "color: red; font-weight: bold;"
     );
-=======
     if (!style.endsWith(".css")) {
         console.log("%c BracketsJS: " + style + " is not a css file.", "color: red; font-weight: bold;");
         return;
@@ -74,7 +72,6 @@ brackets.addScript = (path, bypass) =>{
         script.src = path;
         document.getElementsByTagName('body')[0].appendChild(script);
     }
->>>>>>> 842c16a8350c0fbf24786dda37ecff7aacef4b27
     return;
   } else {
     removeLinks();
