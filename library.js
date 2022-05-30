@@ -74,7 +74,6 @@ brackets.addScript = (path, bypass) =>{
         script.src = path;
         document.getElementsByTagName('body')[0].appendChild(script);
     }
->>>>>>> 842c16a8350c0fbf24786dda37ecff7aacef4b27
     return;
   } else {
     removeLinks();
