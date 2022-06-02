@@ -4,6 +4,7 @@
 // Javascript libary with functions for live dom manipulation
 var brackets = {};
 const version = "v1.2.0";
+console.log("fakecommit")
 
 console.log(
   "%c BracketsJS: You are currently using " + version,
