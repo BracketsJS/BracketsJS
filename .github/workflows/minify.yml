@@ -11,5 +11,6 @@ jobs:
     steps:
       - uses: nizarmah/auto-minify@v2.1.1
         with:
-          ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
-          COMMIT_MESSAGE: "Minify"
+          directory: .
+          overwrite: true
+          
