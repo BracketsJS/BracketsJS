@@ -18,5 +18,5 @@ jobs:
           stale-pr-message: 'This PR is stale, please be active or your report will be closed'
           close-issue-message: 'This issue has been closed for inactivity'
           close-pr-message: 'This PR has been closed for inactivity'
-          days-before-stale: 30
+          days-before-stale: '30'
 
