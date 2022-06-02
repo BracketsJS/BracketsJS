@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .item {
+        @apply text-2xl bg-gray-700 p-4 rounded-lg font-bold;
+    }
+    .big {
+        @apply text-4xl;
+    }
+}
