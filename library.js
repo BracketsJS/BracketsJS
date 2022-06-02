@@ -4,7 +4,6 @@
 // Javascript libary with functions for live dom manipulation
 var brackets = {};
 const version = "v1.2.0";
-console.log("fakecommit")
 
 console.log(
   "%c BracketsJS: You are currently using " + version,
@@ -170,5 +169,3 @@ var delay = setTimeout.bind(window); // aliases setTimeout to just 'delay'
 const getAll = (selector) => document.querySelectorAll(selector); // quick alias to get all elements
 const getRand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min; // get a random number
 const rmChild = (elem) => elem.parentNode.removeChild(elem);
-
-// fakecommit
