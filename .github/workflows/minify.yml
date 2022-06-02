@@ -6,11 +6,14 @@ on:
      - master
 
 jobs:
-  add-contributors:
+  minify:
+    name: Minify
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - uses: nizarmah/auto-minify@v2.1.1
         with:
           directory: .
           overwrite: true
-          
+          ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          COMMIT_MESSAGE: "Minify"
