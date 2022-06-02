@@ -1,0 +1,25 @@
+
+name: Stale
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Close Stale Issues
+      - uses: actions/stale@v5.0.0
+        with:
+          stale-issue-message: 'This bug report is stale, please be active or your report will be closed'
+          stale-pr-message: 'This PR is stale, please be active or your report will be closed'
+          close-issue-message: 'This issue has been closed for inactivity'
+          close-pr-message: 'This PR has been closed for inactivity'
+          days-before-stale: 30
+
