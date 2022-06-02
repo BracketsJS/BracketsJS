@@ -2,11 +2,8 @@
 name: Stale
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+  schedule:
+    - cron: "* * * * *"
   workflow_dispatch:
 
 jobs:
