@@ -57,7 +57,7 @@ brackets.addScript = (path, bypass) =>{
     if (!path.endsWith(".js")) {
         if (bypass == 'fileName') { 
             console.log('%c BracketsJS: fileName bypass is used, this is not recommended', 'color: orange; font-weight: bold;' )
-            let bypassFileExtension = true;
+            bypassFileExtension = true;
         }
         if (bypassFileExtension) {
             const script = document.createElement('script');
@@ -71,9 +71,8 @@ brackets.addScript = (path, bypass) =>{
         const script = document.createElement('script');
         script.src = path;
         document.getElementsByTagName('body')[0].appendChild(script);
+        return;
     }
-    return;
-  } else {
     removeLinks();
     loadCSSFile(style);
   }
@@ -86,7 +85,7 @@ brackets.addScript = (path, bypass) => {
         "%c BracketsJS: fileName bypass is used, this is not recommended",
         "color: orange; font-weight: bold;"
       );
-      let bypassFileExtension = true;
+      bypassFileExtension = true;
     }
     if ((bypassFileExtension = true)) {
       const script = document.createElement("script");
