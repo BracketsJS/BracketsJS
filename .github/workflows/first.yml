@@ -4,7 +4,8 @@ name: First Interaction
 on:
   pull_request:
     branches: [ master ]
-  issue_comment: [ master ]
+  issue_comment:
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
