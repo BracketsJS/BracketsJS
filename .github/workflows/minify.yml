@@ -17,4 +17,5 @@ jobs:
           overwrite: true
           ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
           COMMIT_MESSAGE: "Minify"
+          ref: origin master
     
