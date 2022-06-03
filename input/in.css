@@ -4,7 +4,7 @@
 
 @layer components {
     .item {
-        @apply text-sm md:text-2xl md:bg-gray-700 p-6 md:p-4 rounded-lg font-bold;
+        @apply text-sm md:text-2xl md:bg-gray-400 md:dark:bg-gray-700 p-6 md:p-4 rounded-lg font-bold;
     }
     .big {
         @apply text-2xl md:text-4xl;
