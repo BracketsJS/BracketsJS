@@ -3,7 +3,7 @@
 // BracketsJS
 // Javascript libary with functions for live dom manipulation
 var brackets = {};
-const version = "v1.2.0";
+const version = "v1.3.0";
 
 console.log(
   "%c BracketsJS: You are currently using " + version,
