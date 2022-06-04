@@ -2,7 +2,7 @@
   "name": "bracketsjs",
   "version": "1.3.0",
   "description": "BracketsJS framework",
-  "main": "library.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
