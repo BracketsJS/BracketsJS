@@ -3,8 +3,11 @@ A JavaScript library that provides functions for live DOM manipulation. It has f
 - Injecting scripts, dynamically
 - Swapping, removing, or adding stylesheets
 - Creating and deleting elements with ease
-## Building
-To build BracketsJS, run
+## Getting Started
+To download and build BracketsJS, run these commands:
 ```
-npm build
+git clone https://github.com/JaydenDev/BracketsJS.git
+cd BracketsJS
+npm install
+npm run build
 ```
