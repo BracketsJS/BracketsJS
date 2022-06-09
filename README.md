@@ -3,3 +3,8 @@ A JavaScript library that provides functions for live DOM manipulation. It has f
 - Injecting scripts, dynamically
 - Swapping, removing, or adding stylesheets
 - Creating and deleting elements with ease
+## Building
+To build BracketsJS, run
+```
+npm build
+```
