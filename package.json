@@ -1,24 +1,18 @@
 {
   "name": "bracketsjs",
-  "version": "1.3.1",
-  "description": "BracketsJS framework",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "A JavaScript library that provides functions for live DOM manipulation.",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JaydenDev/BracketsJS.git"
-  },
-  "keywords": [
-    "JS",
-    "Framework",
-    "Libary"
-  ],
   "author": "JaydenDev",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JaydenDev/BracketsJS/issues"
-  },
-  "homepage": "https://github.com/JaydenDev/BracketsJS#readme"
+  "homepage": "https://jdev.eu.org/BracketsJS",
+  "devDependencies": {
+      "eslint": "^7.32.0",
+      "opencollective-postinstall": "^2.0.3",
+      "webpack": "^5.53.0",
+      "webpack-cli": "^4.9.1"
+  }
 }

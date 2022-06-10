@@ -1,16 +1,17 @@
 // JaydenDev 2022
 // MIT License
 // BracketsJS
-// Javascript libary with functions for live dom manipulation
+// Javascript libary with functions for live DOM manipulation
+
 var brackets = {};
-const version = "v1.3.0";
+brackets.version = "v1.3.0";
 
 console.log(
-  "%c BracketsJS: You are currently using " + version,
+  "%c BracketsJS: You are currently using " + brackets.version,
   "color: green; font-weight: bold;"
 );
 
-// functions
+// Functions
 brackets.createElem = (element, parentID, id, className, innerHTML, href) => {
   var newElement = document.createElement(element);
   if (id) {
@@ -163,9 +164,9 @@ brackets.getScripts = () => {
   );
 };
 
-// aliases
-var _ = document.querySelector.bind(document); // aliases document.querySelector to _
-var delay = setTimeout.bind(window); // aliases setTimeout to just 'delay'
-const getAll = (selector) => document.querySelectorAll(selector); // quick alias to get all elements
-const getRand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min; // get a random number
-const rmChild = (elem) => elem.parentNode.removeChild(elem);
+// Aliases
+var _ = document.querySelector.bind(document); // Aliases document.querySelector to _
+var delay = setTimeout.bind(window); // Aliases setTimeout to just 'delay'
+const getAll = (selector) => document.querySelectorAll(selector); // Quick alias to get all elements
+const getRand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min; // Get a random number
+const rmChild = (elem) => elem.parentNode.removeChild(elem); // Remove DOM child
