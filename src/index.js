@@ -1,7 +1,7 @@
 // JaydenDev 2022
 // MIT License
 // BracketsJS
-// Javascript libary with functions for live DOM manipulation
+// Javascript library with functions for live DOM manipulation
 
 var brackets = {};
 brackets.version = "v1.3.0";
@@ -11,7 +11,6 @@ console.log(
   "color: green; font-weight: bold;"
 );
 
-// Functions
 brackets.createElem = (element, parentID, id, className, innerHTML, href) => {
   var newElement = document.createElement(element);
   if (id) {
@@ -164,9 +163,14 @@ brackets.getScripts = () => {
   );
 };
 
+brackets.setHTMLToVarOnVarUpdate = (id, varName) => {
+  var elem = _("#" + id);
+  varName.on("update", () => {
+    elem.innerHTML = varName.get();
+  });
+};
+
 // Aliases
 var _ = document.querySelector.bind(document); // Aliases document.querySelector to _
 var delay = setTimeout.bind(window); // Aliases setTimeout to just 'delay'
-const getAll = (selector) => document.querySelectorAll(selector); // Quick alias to get all elements
-const getRand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min; // Get a random number
 const rmChild = (elem) => elem.parentNode.removeChild(elem); // Remove DOM child
