@@ -17,7 +17,17 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
     },
     optimization: {
-        minimize: "preserve"
+        minimize: true,
+        mangleExports: false,
+        minimizer: [
+            new TerserPlugin({
+                terserOptions: {
+                    keep_classnames: true,
+                    keep_fnames: true,
+                    mangle: false
+                }
+            })
+        ]
     },
     plugins: [
 
