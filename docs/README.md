@@ -19,7 +19,7 @@ It's as easy as linking it in your HTML in the HEAD tag
 ## createElement
 Creates an element with the given tag name.
 ```javascript
-createElement(element, parentID, id, className, innerHTML, href);
+brackets.createElement(element, parentID, id, className, innerHTML, href);
 ```
 **element** - The element tag
 **parentID** - The ID of the parent element \
@@ -30,59 +30,44 @@ createElement(element, parentID, id, className, innerHTML, href);
 ## removeLinks
 Remove all link tags
 ```javascript
-removeLinks();
+brackets.removeLinks();
 ```
 ## swapStyles
 Swap the stylesheet with the stylesheet defined
 ```javascript
-swapStyles(stylesheet);
+brackets.swapStyles(stylesheet);
 ```
 **stylesheet** - Path to css file
 ## addScript
 Injects as script into head tag
 ```javascript
-addScript(script);
+brackets.addScript(script);
 ```
 ## loadCSSFile
 Loads a css file
 ```javascript
-loadCSSFile(file);
+brackets.loadCSSFile(file);
 ```
 **script** - path to script
+## getScripts
+```javascript
+brackets.getScripts()
+```
+## swapFavicon
+```javascript
+brackets.swapFavicon(path/to/favicon)
+```
+## toggleElementVisibility
+```javascript
+brackets.toggleElementVisibility(id)
+```
+### toggleClass
+```javascript
+brackets.toggleClass(id, className)
+```
 # Aliases
 ## get
 Gets the element with the given id
 ```javascript
-get(id);
-```
-## getAll
-Gets all elements with the given class name
-```javascript
-getAll(className or ID);
-```
-# Math aliases
-## add
-Adds two numbers
-```javascript
-add(number1, number2);
-```
-## sub
-Subtracts two numbers
-```javascript
-sub(number1, number2);
-```
-## mult
-Multiplies two numbers
-```javascript
-mult(number1, number2);
-```
-## div
-Divides two numbers
-```javascript
-divid(number1, number2);
-```
-## getRand
-Gets a random number between the given numbers
-```javascript
-getRand(min, max);
+_(id)
 ```
