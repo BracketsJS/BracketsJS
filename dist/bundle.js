@@ -1,1 +1,189 @@
-(()=>{var e={version:"v1.3.0"};console.log("%c BracketsJS: You are currently using "+e.version,"color: green; font-weight: bold;"),e.createElem=(e,t,o,s,n,l)=>{var i=document.createElement(e);return o&&(i.id=o),s&&(i.className=s),n&&(i.innerHTML=n),t&&(parent=document.getElementById(t),parent.appendChild(i)),"a"==e&&(i.href=l),i},e.removeLinks=()=>{for(var e=document.getElementsByTagName("link"),t=0;t<e.length;t++)e[t].parentNode.removeChild(e[t])},e.swapStyles=t=>{if(!t.endsWith(".css")){if(console.log("%c BracketsJS: "+t+" is not a css file.","color: red; font-weight: bold;"),!t.endsWith(".css"))return void console.log("%c BracketsJS: "+t+" is not a css file.","color: red; font-weight: bold;");removeLinks(),loadCSSFile(t)}e.addScript=(e,o)=>{if(e.endsWith(".js")){const t=document.createElement("script");return t.src=e,void document.getElementsByTagName("body")[0].appendChild(t)}if("fileName"==o&&(console.log("%c BracketsJS: fileName bypass is used, this is not recommended","color: orange; font-weight: bold;"),bypassFileExtension=!0),bypassFileExtension){{const t=document.createElement("script");t.src=e,document.getElementsByTagName("body")[0].appendChild(t)}removeLinks(),loadCSSFile(t)}else console.log("BracketsJS: "+e+" is not a javascript file.")}},e.addScript=(e,t)=>{if(e.endsWith(".js")){const t=document.createElement("script");t.src=e,document.getElementsByTagName("body")[0].appendChild(t)}else{if("fileName"==t&&(console.log("%c BracketsJS: fileName bypass is used, this is not recommended","color: orange; font-weight: bold;"),bypassFileExtension=!0),!(bypassFileExtension=!0))return void console.log("BracketsJS: "+e+" is not a javascript file.");{const t=document.createElement("script");t.src=e,document.getElementsByTagName("body")[0].appendChild(t)}}},e.removeElem=e=>{var t=get(e);o(t)},e.loadCSSFile=e=>{if(e.endsWith(".css")){const t=document.createElement("link");t.rel="stylesheet",t.href=e,document.getElementsByTagName("head")[0].appendChild(t)}else console.log("%c BracketsJS: "+e+" is not a css file.","color: red; font-weight: bold;")},e.swapFavicon=e=>{var t=document.querySelector("link[rel*='icon']")||document.createElement("link");t.type="image/x-icon",t.rel="shortcut icon",t.href=e,document.getElementsByTagName("head")[0].appendChild(t)},e.toggleElementVisibility=e=>{var o=t("#"+e);"block"==o.style.display?o.style.display="none":o.style.display="block"},e.toggleClass=(e,o)=>{var s=t("#"+e);s.classList.contains(o)?s.classList.remove(o):s.classList.add(o)},e.getScripts=()=>{for(var e=document.getElementsByTagName("script"),t=[],o=0;o<e.length;o++)t.push(e[o].src);console.log("%c DEBUG: Scripts Loaded "+t,"color: green; font-weight: bold;")},e.setHTMLToVarOnVarUpdate=(e,o)=>{var s=t("#"+e);o.on("update",(()=>{s.innerHTML=o.get()}))};var t=document.querySelector.bind(document);setTimeout.bind(window);const o=e=>e.parentNode.removeChild(e)})();
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["brackets"] = factory();
+	else
+		root["brackets"] = factory();
+})(self, () => {
+return /******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ (function(module) {
+
+// JaydenDev 2022
+// MIT License
+// BracketsJS
+// A JavaScript library that provides functions for live DOM manipulation
+var brackets = {
+  version: "v1.4.0",
+  debug: false,
+  createElem: (element, parentID, id, className, innerHTML, href) => {
+    let elem = document.createElement(element);
+
+    if (id) {
+      elem.id = id;
+    }
+
+    if (className) {
+      elem.className = className;
+    }
+
+    if (innerHTML) {
+      elem.innerHTML = innerHTML;
+    }
+
+    if (parentID) {
+      parent = document.getElementById(parentID);
+      parent.appendChild(elem);
+    }
+
+    if (element == "a") {
+      elem.href = href;
+    }
+
+    return elem;
+  },
+  removeLinks: () => {
+    let links = document.getElementsByTagName("link");
+
+    for (var i = 0; i < links.length; i++) {
+      links[i].parentNode.removeChild(links[i]);
+    }
+  },
+  swapStyles: style => {
+    if (!style.endsWith(".css")) {
+      return new Error(`BracketsJS: ${path} is not a valid CSS file`);
+    } else {
+      this.removeLinks();
+      this.loadCSSFile(style);
+    }
+  },
+  addScript: (path, bypass) => {
+    if (!path.endsWith(".js")) {
+      let bypassFileExtension = false;
+
+      if (bypass == "fileName") {
+        console.warn("BracketsJS: fileName bypass is being used, this is not recommended.");
+        bypassFileExtension = true;
+      }
+
+      if (bypassFileExtension) {
+        let script = document.createElement("script");
+        script.src = path;
+        document.body.appendChild(script);
+      } else {
+        return new Error(`BracketsJS: ${path} is not a valid javascript file.`);
+      }
+    } else {
+      let script = document.createElement("script");
+      script.src = path;
+      document.body.appendChild(script);
+      return;
+    }
+
+    this.removeLinks();
+    this.loadCSSFile(style);
+  },
+  removeElem: id => {
+    var elem = get(id);
+    elem.parentNode.removeChild(elem);
+  },
+  loadCSSFile: path => {
+    if (!path.endsWith(".css")) {
+      return new Error(`BracketsJS: ${path} is not a valid CSS file`);
+    } else {
+      let link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = path;
+      document.head.appendChild(link);
+    }
+  },
+  swapFavicon: href => {
+    let link = document.querySelector('link[rel*="icon"]') || document.createElement("link");
+    link.type = "image/x-icon";
+    link.rel = "shortcut icon";
+    link.href = href;
+    document.head.appendChild(link);
+  },
+  toggleElementVisibility: id => {
+    let elem = document.getElementsById(id);
+
+    if (elem.style.display == "block") {
+      elem.style.display = "none";
+    } else {
+      elem.style.display = "block";
+    }
+  },
+  toggleClass: (id, className) => {
+    let elem = document.getElementById(id);
+
+    if (elem.classList.contains(className)) {
+      elem.classList.remove(className);
+    } else {
+      elem.classList.add(className);
+    }
+  },
+  getScripts: () => {
+    let scriptsArray = [];
+
+    for (var i = 0; i < document.scripts.length; i++) {
+      scriptsArray.push(document.scripts[i].src);
+    }
+
+    this.debugLog(`Scripts Loaded ${scriptsArray}`);
+  },
+  debugLog: text => {
+    if (this.debug) {
+      console.warn(`DEBUG: ${text}`);
+    }
+  }
+};
+module.exports = brackets;
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	
+/******/ 	return __webpack_exports__;
+/******/ })()
+;
+});
+//# sourceMappingURL=bundle.js.map
