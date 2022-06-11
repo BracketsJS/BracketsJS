@@ -19,3 +19,4 @@ cd BracketsJS
 npm install
 npm run build
 ```
+# Contributors
