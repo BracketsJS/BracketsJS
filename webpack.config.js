@@ -21,7 +21,7 @@ module.exports = {
     extensions: ['.js'],
     modules: [path.resolve(__dirname, 'src')],
   },
-  mode: 'development',
+  mode: 'production',
   devtool: 'source-map',
 };
 
