@@ -38,17 +38,17 @@ npm run build
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/actions-user>
-            <img src=https://avatars.githubusercontent.com/u/65916846?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=actions-user/>
-            <br />
-            <sub style="font-size:14px"><b>actions-user</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/Darth-Ness>
             <img src=https://avatars.githubusercontent.com/u/75047141?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Darth-Ness/>
             <br />
             <sub style="font-size:14px"><b>Darth-Ness</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/kccuber-scratch>
+            <img src=https://avatars.githubusercontent.com/u/92891642?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=kccuber/>
+            <br />
+            <sub style="font-size:14px"><b>kccuber</b></sub>
         </a>
     </td>
 </tr>
