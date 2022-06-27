@@ -4,7 +4,7 @@
 // A JavaScript library that provides functions for live DOM manipulation
 
 var brackets = {
-  version: "v1.4.0",
+  version: "v1.3.3-lts",
   debug: false,
 
   createElem: (element, parentID, id, className, innerHTML, href) => {
