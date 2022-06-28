@@ -124,7 +124,7 @@ var brackets = {
   toggleClass: (id, className) => {
     let elem = document.getElementById(id);
 
-    if (elem.classList.contains(className)) {
+    if (elem.classList.includes(className)) {
       elem.classList.remove(className);
     } else {
       elem.classList.add(className);
