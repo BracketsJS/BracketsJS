@@ -91,6 +91,9 @@ var brackets = {
     this.removeLinks();
     this.loadCSSFile(style);
   },
+  changeTitle: newTitle => {
+    document.title(newTitle);
+  },
   removeElem: id => {
     var elem = get(id);
     elem.parentNode.removeChild(elem);
