@@ -158,7 +158,7 @@ var brackets = {
   },
   debugLog: text => {
     if (this.debug) {
-      console.warn(`DEBUG: ${text}`);
+      console.log(`DEBUG: ${text}`);
     }
   }
 };
