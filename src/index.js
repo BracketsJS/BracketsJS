@@ -89,7 +89,7 @@ var brackets = {
     document.head.appendChild(link);
   },
 
-  toggleElementVisibility: (id) => {
+  toggleElemVisibility: (id) => {
     let elem = document.getElementsById(id);
     if (elem.style.display == "block") {
       elem.style.display = "none";
