@@ -112,7 +112,7 @@ var brackets = {
     link.href = href;
     document.head.appendChild(link);
   },
-  toggleElementVisibility: id => {
+  toggleElemVisibility: id => {
     let elem = document.getElementsById(id);
 
     if (elem.style.display == "block") {
