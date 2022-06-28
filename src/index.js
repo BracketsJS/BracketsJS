@@ -109,6 +109,13 @@ var brackets = {
 
   detectURIArgs: () => {
     let url = window.location.href;
+    let urlArgs = url.split("?");
+    let args = urlArgs[1].split("&");
+    let argsObj = {};
+    for (let i = 0; i < args.length; i++) {
+      let arg = args[i].split("=");
+      argsObj[arg[0]] = arg[1];
+    }
 
     console.log(argsObj);
     return argsObj;
