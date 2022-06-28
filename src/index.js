@@ -100,7 +100,7 @@ var brackets = {
 
   toggleClass: (id, className) => {
     let elem = document.getElementById(id);
-    if (elem.classList.contains(className)) {
+    if (elem.classList.includes(className)) {
       elem.classList.remove(className);
     } else {
       elem.classList.add(className);
@@ -116,6 +116,7 @@ var brackets = {
       let arg = args[i].split("=");
       argsObj[arg[0]] = arg[1];
     }
+
     console.log(argsObj);
     return argsObj;
   },
