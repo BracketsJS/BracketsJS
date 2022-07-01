@@ -1,7 +1,12 @@
-// JaydenDev 2022
-// MIT License
-// BracketsJS
-// A JavaScript library that provides functions for live DOM manipulation
+/*
+         JaydenDev 2022
+           MIT License
+            BracketsJS
+            
+      A JavaScript library that
+     provides functions for live
+         DOM manipulation
+*/
 
 var brackets = {
   version: "v1.4.0",
