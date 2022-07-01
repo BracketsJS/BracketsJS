@@ -9,7 +9,7 @@ To use BracketsJS, link this in the head of your HTML document:
 ```
 <script src="https://cdn.jsdelivr.com/gh/BracketsJS/BracketsJS/dist/bundle.js"></script>
 ```
-For more documentation, please go to the [official documentation site for BracketsJS](https://jdev.eu.org/BracketsJS/docs/#/).
+For more documentation, please go to the [official documentation site for BracketsJS](https://bracketsjs.github.io/docs/#/).
 
 ## Building BracketsJS
 To download and build BracketsJS, run these commands:
