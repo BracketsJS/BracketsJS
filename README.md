@@ -7,7 +7,7 @@ A JavaScript library that provides functions for live DOM manipulation. It has f
 ## Using BracketsJS
 To use BracketsJS, link this in the head of your HTML document:
 ```
-<script src="https://cdn.jsdelivr.com/gh/BracketsJS/BracketsJS/dist/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/BracketsJS/BracketsJS@latest/dist/bundle.js"></script>
 ```
 For more documentation, please go to the [official documentation site for BracketsJS](https://bracketsjs.github.io/docs/#/).
 
