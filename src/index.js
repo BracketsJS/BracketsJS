@@ -3,9 +3,14 @@
 // BracketsJS
 // A JavaScript library that provides functions for live DOM manipulation
 
+// run check on brackets variable to detect conflicting libraries
+if (typeof variable !== 'undefined') {
+  console.log('A conflicting library has been loaded.')
+}
+
 var brackets = {
   version: "v1.4.0",
-  debug: false,
+  debug: true,
 
   createElem: (element, parentID, id, className, innerHTML, href) => {
     let elem = document.createElement(element);
