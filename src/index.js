@@ -1,10 +1,10 @@
-// JaydenDev 2022
+// jdev082 2023
 // MIT License
 // BracketsJS
 // A JavaScript library that provides functions for live DOM manipulation
 
 // run check on brackets variable to detect conflicting libraries
-if (typeof variable !== 'undefined') {
+if (typeof $ !== 'undefined') {
   console.log('A conflicting library has been loaded.')
 }
 
@@ -40,7 +40,7 @@ var brackets = {
   },
   swapStyles: (style) => {
     if (!style.endsWith(".css")) {
-      return new Error(`BracketsJS: ${path} is not a valid CSS file`);
+      return new Error(`BracketsJS: ${style} is not a valid CSS file`);
     } else {
       this.removeLinks();
       this.loadCSSFile(style);
@@ -131,14 +131,8 @@ var brackets = {
     for (var i = 0; i < document.scripts.length; i++) {
       scriptsArray.push(document.scripts[i].src);
     }
-    this.debugLog(`Scripts Loaded ${scriptsArray}`);
+    console.log(`DEBUG: Scripts Loaded ${scriptsArray}`);
   },
-
-  debugLog: (text) => {
-    if (this.debug) {
-      console.log(`DEBUG: ${text}`);
-    }
-  }
 }
 
 module.exports = brackets;
