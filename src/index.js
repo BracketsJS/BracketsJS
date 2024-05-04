@@ -12,6 +12,10 @@ var brackets = {
   version: "v1.4.0",
   debug: true,
 
+  $: (e) => {
+    return document.querySelector(e);
+  },
+
   createElem: (element, parentID, id, className, innerHTML, href) => {
     let elem = document.createElement(element);
     if (id) {
